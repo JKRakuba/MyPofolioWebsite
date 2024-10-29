@@ -17,6 +17,7 @@ body {
             font-family: Arial, sans-serif;
             background-color: #f4f4f4;
             align-items: center;
+            background-image: url('abstract technology.jpg');
         }
 
 h1 {
@@ -78,11 +79,12 @@ p {
   display: flex;
   flex-wrap: wrap;
   justify-content: center;
-  gap: 20px;
+  gap: 60px;
 }
 
 .hobby-card1 {
   background: #FFBE98;
+
   border-radius: 10px;
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
   width: 300px;
@@ -102,7 +104,7 @@ p {
 }
 
 .hobby-card3 {
-  background: #125B9A;
+  background: #3c90da;
   border-radius: 10px;
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
   width: 300px;
@@ -151,17 +153,19 @@ p1 {
   justify-content: space-between; /* Space between the columns */
   flex-wrap: wrap; /* Allow wrapping for smaller screens */
   margin: 60px; /* Space around the section */
+  align-self: center;
 }
 
 .col1 {
   flex: 0.5; /* Allow columns to grow */
-  min-width: 50px; /* Minimum width for responsiveness */
+  min-width: 200px; /* Minimum width for responsiveness */
   margin: 20px; /* Space around each column */
   background: #D3D3D3; /* Light background */
   padding: 20px; /* Padding inside the column */
   border-radius: 8px; /* Rounded corners */
   box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1); /* Subtle shadow */
   text-align: center;
+  align-self: center;
 }
 
 .skills-list {
@@ -171,6 +175,49 @@ p1 {
 
 .skills-list li {
   padding: 10px 0; /* Space between list items */
+}
+
+.about-me-container {
+    display: flex; /* Use Flexbox for layout */
+    justify-content: center; /* Center the card horizontally */
+    margin: 20px; /* Space around the section */
+}
+
+
+/*ABOUT ME*/
+
+.card {
+    display: flex; /* Use Flexbox for the card layout */
+    background: #fff; /* White background for the card */
+    border-radius: 10px; /* Rounded corners */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Subtle shadow */
+    overflow: hidden; /* Ensure rounded corners apply to image */
+    background-size: 500px 200px;
+}
+
+.profile-image {
+    flex: 1; /* Allow image column to grow */
+    
+}
+
+.profile-image img {
+    width: 200px; /* Make image fill the column */
+    height: 200px; /* Maintain aspect ratio */
+    border-radius: 5px;
+}
+
+.profile-info {
+    flex: 2; /* Allow text column to grow more */
+    padding: 5px; /* Padding inside the text column */
+}
+
+.profile-info h1 {
+    margin: 0 0 10px; /* Space below the heading */
+}
+
+.profile-info p {
+    margin: 0 0 10px; /* Space below paragraphs */
+    color: #555; /* Text color */
 }
 
 
@@ -206,24 +253,27 @@ p1 {
  <!-- About me container -->
 
  <div class="about-me-container">
-
   <!-- Card with profile info -->
   <div class="card">
+      <!-- Profile photo -->
+      <div class="profile-image">
+          <img src="Photo.jpg" alt="Profile Photo">
+      </div>
 
-  <!-- Profile photo -->
-      <img src="Photo.jpg" alt="Profile Photo">
-      
-  <!-- Profile information -->
-      <h2>Julliet Kgomotso Rakuba</h2>
-      <p>I am a passionate software developer and graphic designer based in Pretoria, South Africa.
-      I enjoy combining creativity with technical skills to create visually appealing and functional projects.
-      I studied at The Independent Institute of Education Rosebank College in Pretoria, Gauteng, South Africa.
-      
-      <p>I studied two Diplomas in Computer-based Graphic Development & Information Technology in Software Development.
-        I've been freelancing graphic design for the past 4 to 5 years, I specialize in specific areas like, branding,
-        illustration and photography.</p>
+      <!-- Profile information -->
+      <div class="profile-info">
+          <h1>Julliet Kgomotso Rakuba</h1>
+          <p>I am a passionate software developer and graphic designer based in Pretoria, South Africa. 
+          I enjoy combining creativity with technical skills to create visually appealing and functional projects. 
+          I studied at The Independent Institute of Education Rosebank College in Pretoria, Gauteng, South Africa.</p>
+
+          <p>I studied two Diplomas in Computer-based Graphic Development & Information Technology in Software Development. 
+          I've been freelancing graphic design for the past 4 to 5 years, specializing in areas like branding, 
+          illustration, and photography.</p>
+      </div>
   </div>
 </div>
+
 <div>
 
 <!-- HOBBIES -->
@@ -237,19 +287,19 @@ p1 {
       </div>
   
       <div class="hobby-card2">
-          <img src="hobby2.jpg" alt="Hobby 2" class="hobby-image">
+          <img src="graphics.png" alt="graphics.png" class="hobby-image">
           <h2>Designing</h2>
           <p>Exploring new places and experiencing different cultures.</p>
       </div>
       
       <div class="hobby-card3">
-          <img src="hobby3.jpg" alt="Hobby 3" class="hobby-image">
+          <img src="coding.jpeg" alt="coding.jpeg" class="hobby-image">
           <h2>Coding</h2>
           <p>Diving into different worlds through books.</p>
       </div>
   
       <div class="hobby-card4">
-          <img src="hobby4.jpg" alt="Hobby 4" class="hobby-image">
+          <img src="drawing.jpg" alt="drawing.jpg" class="hobby-image">
           <h2>Drawing</h2>
           <p>Staying fit and enjoying the outdoors on my bike.</p>
       </div>
@@ -289,15 +339,15 @@ p1 {
       </div>
   </div>
 </div>
-
-
-    <div class="button-container">
-      <a href="CV - Julliet-Rakuba.pdf" class="download-button" download>Download CV</a>
-    </div>
       </div>
       </div>
    </div>
 </div>
+
+<div class="button-container">
+  <a href="CV - Julliet-Rakuba.pdf" class="download-button" download>Download CV</a>
+</div>
+
 </body>
 
 
