@@ -6,6 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>Profile</title>
 <link href="css/style.css" rel="stylesheet" type="text/css">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
 <style type="text/css">
 body,td,th {
 	font-family: "Gill Sans", "Gill Sans MT", "Myriad Pro", "DejaVu Sans Condensed", Helvetica, Arial, sans-serif;
@@ -24,10 +25,11 @@ h1 {
             padding-top: 10px;
             padding-bottom: 10px;
             font-size: 40px;
+            margin:10px;
         }
 
 h2 {
-            color: #f4f4f4;
+            color: #1b1b1b;
             text-align: center;
             padding-top: 10px;
             padding-bottom: 10px;
@@ -37,9 +39,9 @@ h2 {
 p {
             color: #1b1b1b;
             text-align: center;
-            font-size: 20px;
+            font-size: 16px;
             padding-bottom: 15px;
-            margin: 50px;
+            margin: 10px;
         }
 
 .about-me-container {
@@ -67,7 +69,110 @@ p {
             border-color: #ebdb04;
             object-fit: cover;
             margin-bottom: 20px;
+            border-color: #7a9e06;
 }
+
+/* HOBBIES OR INTERESTS*/
+
+.hobby-container {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 20px;
+}
+
+.hobby-card1 {
+  background: #FFBE98;
+  border-radius: 10px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+  width: 300px;
+  text-align: center;
+  padding: 20px;
+  transition: transform 0.3s;
+}
+
+.hobby-card2 {
+  background: #F05A7E;
+  border-radius: 10px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+  width: 300px;
+  text-align: center;
+  padding: 20px;
+  transition: transform 0.3s;
+}
+
+.hobby-card3 {
+  background: #125B9A;
+  border-radius: 10px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+  width: 300px;
+  text-align: center;
+  padding: 20px;
+  transition: transform 0.3s;
+}
+
+.hobby-card4 {
+  background: #0B8494;
+  border-radius: 10px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+  width: 300px;
+  text-align: center;
+  padding: 20px;
+  transition: transform 0.3s;
+}
+
+
+.hobby-card:hover {
+  transform: scale(1.05);
+}
+
+.hobby-image {
+  width: 100%;
+  height: 150px;
+  border-radius: 10px;
+  object-fit: cover;
+  margin-bottom: 10px;
+}
+
+h2 {
+  margin: 10px 0;
+  font-size: 18px;
+}
+
+p1 {
+  color: #fff;
+  font-size: 14px;
+}
+
+/* SKILLS */
+
+.skills-section {
+  display: flex; /* Use Flexbox to arrange columns */
+  justify-content: space-between; /* Space between the columns */
+  flex-wrap: wrap; /* Allow wrapping for smaller screens */
+  margin: 60px; /* Space around the section */
+}
+
+.col1 {
+  flex: 0.5; /* Allow columns to grow */
+  min-width: 50px; /* Minimum width for responsiveness */
+  margin: 20px; /* Space around each column */
+  background: #D3D3D3; /* Light background */
+  padding: 20px; /* Padding inside the column */
+  border-radius: 8px; /* Rounded corners */
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1); /* Subtle shadow */
+  text-align: center;
+}
+
+.skills-list {
+  list-style-type: none; /* Remove bullet points */
+  padding: 0; /* Remove padding */
+}
+
+.skills-list li {
+  padding: 10px 0; /* Space between list items */
+}
+
 
 </style>
 </head>
@@ -93,6 +198,11 @@ p {
 
 <!-- BODY-->
 
+  <!-- About me Heading -->
+<div class="text-center">
+  <h1 class="display">About me</h1>
+  <p>Learn about me, my experiences, skills and interests</p>
+</div>
  <!-- About me container -->
 
  <div class="about-me-container">
@@ -100,11 +210,11 @@ p {
   <!-- Card with profile info -->
   <div class="card">
 
-<!-- Profile photo -->
+  <!-- Profile photo -->
       <img src="Photo.jpg" alt="Profile Photo">
       
-<!-- Profile information -->
-      <h1>Julliet Kgomotso Rakuba</h1>
+  <!-- Profile information -->
+      <h2>Julliet Kgomotso Rakuba</h2>
       <p>I am a passionate software developer and graphic designer based in Pretoria, South Africa.
       I enjoy combining creativity with technical skills to create visually appealing and functional projects.
       I studied at The Independent Institute of Education Rosebank College in Pretoria, Gauteng, South Africa.
@@ -114,32 +224,82 @@ p {
         illustration and photography.</p>
   </div>
 </div>
+<div>
 
+<!-- HOBBIES -->
+<section>
+  <h1>My Hobbies</h1>
+  <div class="hobby-container">
+      <div class="hobby-card1">
+        <img src="camera.jpg" alt="camera.jpg" class="hobby-image">
+          <h2>Photography</h2>
+          <p>Capturing moments and creating memories through photography.</p>
+      </div>
+  
+      <div class="hobby-card2">
+          <img src="hobby2.jpg" alt="Hobby 2" class="hobby-image">
+          <h2>Designing</h2>
+          <p>Exploring new places and experiencing different cultures.</p>
+      </div>
+      
+      <div class="hobby-card3">
+          <img src="hobby3.jpg" alt="Hobby 3" class="hobby-image">
+          <h2>Coding</h2>
+          <p>Diving into different worlds through books.</p>
+      </div>
+  
+      <div class="hobby-card4">
+          <img src="hobby4.jpg" alt="Hobby 4" class="hobby-image">
+          <h2>Drawing</h2>
+          <p>Staying fit and enjoying the outdoors on my bike.</p>
+      </div>
+    </section>
+
+  <!-- SKILLS -->
+<div class="skills-section">
+  <div class="col1">
+      <h1>Visual Skills</h1>
       <div class="skills-container">
+          <ul class="skills-list">
+              <li>UI/UX Design</li>
+              <li>Illustrations</li>
+              <li>Visual Design</li>
+              <li>Branding</li>
+              <li>Video Editing</li>
+              <li>Sketch</li>
+              <li>Animation</li>
+              <li>Photography</li>
+          </ul>
+      </div>
+  </div>
 
-<!-- SKILLS -->
-      <h2>Skills</h2>
-        <ul class="skills-list">
-            <li>HTML & CSS</li>
-            <li>JavaScript</li>
-            <li>Java</li>
-            <li>Kotlin</li>
-            <li>Git & GitHub</li>
-            <li>SQL & NoSQL Databases</li>
-            <li>RESTful APIs</li>
-            <li>Azure DevOps</li>
-            <li>UI/UX Design</li>
-            <li>Illustrations</li>
-            <li>Visual Design</li>
-        </ul>
-   
+  <div class="col1">
+      <h1>Coding Skills</h1>
+      <div class="skills-container">
+          <ul class="skills-list">
+              <li>HTML & CSS</li>
+              <li>JavaScript</li>
+              <li>Java</li>
+              <li>Kotlin</li>
+              <li>Git & GitHub</li>
+              <li>SQL & NoSQL Databases</li>
+              <li>RESTful APIs</li>
+              <li>Azure DevOps</li>
+          </ul>
+      </div>
+  </div>
+</div>
+
+
     <div class="button-container">
       <a href="CV - Julliet-Rakuba.pdf" class="download-button" download>Download CV</a>
+    </div>
       </div>
       </div>
    </div>
 </div>
 </body>
+
 
 <!-- FOOTER-->
 	
@@ -147,7 +307,7 @@ p {
     <div class="container">
       <div class="row">
   
-        <!-- Column 1 -->
+        <!-- Column 1: Links -->
         <div class="footer-col">
           <h4>Quick links</h4>
           <ul>
@@ -158,7 +318,7 @@ p {
           </ul>
         </div>
         
-        <!-- Column 2 -->
+        <!-- Column 2: Contact Details -->
         <div class="footer-col">
           <h4>Contacts</h4>
           <ul>
@@ -166,7 +326,7 @@ p {
           </ul>
         </div>
   
-        <!-- Column 3 -->
+        <!-- Column 3: Personal Info -->
         <div class="footer-col">
           <h4>Address</h4>
           <ul>
@@ -174,13 +334,13 @@ p {
           </ul>
         </div>
   
-        <!-- Column 4 : Social Media links-->
-        <div class="footer-col">
-          <h4>Connect</h4>
-          <div class="social-links">
-            <a href="https://github.com/jkrakuba"><i class="fab fa-github"></i></a>
-            <a href="https://za.linkedin.com/in/julliet-rakuba-a72b36166"><i class="fab fa-linkedin-in"></i></a>  
-          </div>
+       <!-- Column 4 : Social Media links-->
+       <div class="footer-col">
+        <h4>Connect</h4>
+        <div class="social-links">
+          <a href="https://github.com/jkrakuba"><i class="fab fa-github"></i></a>
+          <a href="https://za.linkedin.com/in/julliet-rakuba-a72b36166"><i class="fab fa-linkedin"></i></a>
+        </div>
         </div>
       </div>
     </div>
