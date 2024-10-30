@@ -90,7 +90,7 @@ html, body{
   @media only screen and (max-width: 1920px) {
     .menu {
       flex-direction: column;
-      background-color: #7a9e06;
+      background-color: #ebdb04;
       align-items: start;
       position: absolute;
       top: 70px;
