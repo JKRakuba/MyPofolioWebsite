@@ -11,7 +11,7 @@ html, body{
 
   .p{
 
-    color: #262626;
+    color: #1b1b1b;
     font-size: 16px;
   }
 * 
@@ -62,7 +62,7 @@ html, body{
     font-size: 16px;
     font-weight: 500;
     transition: 0.2s all ease-in-out;
-    color: #585858;
+    color: #1b1b1b;
     align-items: center;
   }
   
@@ -90,7 +90,7 @@ html, body{
   @media only screen and (max-width: 1920px) {
     .menu {
       flex-direction: column;
-      background-color: #ebdb04;
+      background-color: #7a9e06;
       align-items: start;
       position: absolute;
       top: 70px;
