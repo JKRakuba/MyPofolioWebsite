@@ -7,7 +7,7 @@
 <title>Home Page</title>
 <link href="css/style.css" rel="stylesheet" type="text/css">
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
-<script> src="script.js" defer</script>
+<script src="script.js" defer></script>
 <style type="text/css">
 body,td,th {
 	font-family: "sans-serif";
@@ -37,204 +37,188 @@ p {
             color: #fff;
             text-align: center;
             font-size: 20px;
-            padding: 5%;
-            padding-top: 5%;
+            padding:10px;
+            padding-top: 0;
         }
+
+button{
+  padding:20px;
+}
     /*CHATBOT*/
 
-.chatbot {
+    @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600&display=swap');
 
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+body {
+  background-color: #bdc3c7;
+  font-family: 'Poppins', sans-serif;
+}
+.chatbot__button {
   position: fixed;
+  bottom: 35px;
   right: 40px;
-  bottom: 100px;
-  width: 420px;
-  background: #fff;
-  transform: scale(0.5);
-  opacity: 0;
-  border-radius: 15px;
-  pointer-events: none;
-  box-shadow:0 4px 10px rgba(0, 0, 0, 0.1);
-}
-
-.show-chatbot .chatbot{
-  transform: scale(1);
-  opacity: 0;
-  pointer-events: none;
-
-}
-.chatbot header{
-
+  width: 50px;
+  height: 50px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
   background: #ebdb04;
-  padding: 16px 0;
-  text-align: center;
-  position: relative;
-}
-
-.chatbot header span{
-  position: absolute;
-  right: 20PX;
-  top:50%;
-  cursor: pointer;
-  transform:  translateY(-50%);
-  display: none;
-}
-
-.chatbot header h2{
-color:#1b1b1b;
-font:16px;
-}
-
-.chatbot .chatbox {
-  height:510px;
-  overflow-y: auto;
-  padding: 30px 20px 70px;
-}
-
-.chatbox .chat {
- display: flex;
-}
-
-  
-.chatbox .chat p{
-  padding: 12px;
-  background: #7a9e06;
-  font-size: 14px;
-  padding: 12px 16px;
-  border-radius: 10px 10px 0px 10px;
-  background: #7a9e06;
-  ;
-
-}
-
-.chatbox .incoming {
-  margin: 20px 0;
-  justify-content:flex-end;
-}
-
-.chatbox .incoming span {
-  height: 32px;
-  width: 32px;
-  color:#fff;
-  background:#1b1b1b;
-  text-align: center;
-  line-height: 32px;
-  border-radius:4px;
-  margin:0 10px 7px 0;
-  align-self: flex-end;
-  }
-
-.chatbox .outgoing {
-  margin: 20px 0;
-  justify-content:flex-end;
-
-  }
-
-.chatbox .incoming p{
   color: #1b1b1b;
-  background: #f2f2f2;
-  border-radius: 10px 10px 0px 10px;
-  }
-
-.chatbot .chat-input{
-
+  border: none;
+  border-radius: 50%;
+  outline: none;
+  cursor: pointer;
+}
+.chatbot__button span {
+  position: absolute;
+}
+.show-chatbot .chatbot__button span:first-child,
+.chatbot__button span:last-child {
+  opacity: 0;
+}
+.show-chatbot .chatbot__button span:last-child {
+  opacity: 1;
+}
+.chatbot {
+  position: fixed;
+  bottom: 100px;
+  right: 40px;
+  width: 420px;
+  background-color: #f3f7f8;
+  border-radius: 15px;
+  box-shadow: 0 0 128px 0 rgba(0, 0, 0, 0.1) 0 32px 64px -48px rgba(0, 0, 0, 0.5);
+  transform: scale(0.5);
+  transition: transform 0.3s ease;
+  overflow: hidden;
+  opacity: 0;
+  pointer-events: none;
+}
+.show-chatbot .chatbot {
+  opacity: 1;
+  pointer-events: auto;
+  transform: scale(1);
+}
+.chatbot__header {
+  position: relative;
+  background-color: #7a9e06;
+  text-align: center;
+  padding: 16px 0;
+}
+.chatbot__header span {
+  display: none;
+  position: absolute;
+  top: 50%;
+  right: 20px;
+  color: #202020;
+  transform: translateY(-50%);
+  cursor: pointer;
+}
+.chatbox__title {
+  font-size: 1.4rem;
+  color: #f3f7f8;
+}
+.chatbot__box {
+  height: 510px;
+  overflow-y: auto;
+  padding: 30px 20px 100px;
+}
+.chatbot__chat {
+  display: flex;
+}
+.chatbot__chat p {
+  max-width: 75%;
+  font-size: 0.95rem;
+  white-space: pre-wrap;
+  color: #202020;
+  background-color: #7a9e06;
+  border-radius: 10px 10px 0 10px;
+  padding: 12px 16px;
+}
+.chatbot__chat p.error {
+  color: #1b1b1b;
+  background: #f8d7da;
+}
+.incoming p {
+  color: #202020;
+  background: #bdc3c7;
+  border-radius: 10px 10px 10px 0;
+}
+.incoming span {
+  width: 32px;
+  height: 32px;
+  line-height: 32px;
+  color: #1b1b1b;
+  background-color: #ebdb04;
+  border-radius: 4px;
+  text-align: center;
+  align-self: flex-end;
+  margin: 0 10px 7px 0;
+}
+.outgoing {
+  justify-content: flex-end;
+  margin: 20px 0;
+}
+.incoming {
+  margin: 20px 0;
+}
+.chatbot__input-box {
   position: absolute;
   bottom: 0;
   width: 100%;
   display: flex;
   gap: 5px;
-  background: #fff;
+  align-items: center;
+  border-top: 1px solid #227ebb;
+  background: #f3f7f8;
   padding: 5px 20px;
-  border-top: 1px solid #ccc;
-  }
-
-.chat-input textarea{
-  height:55px;
+}
+.chatbot__textarea {
   width: 100%;
-  border:none;
+  min-height: 55px;
+  max-height: 180px;
+  font-size: 0.95rem;
+  padding: 16px 15px 16px 0;
+  color: #202020;
+  border: none;
   outline: none;
-  font-size: 14px;
-  resize:none;
-  padding:16px 15px 16px 0;
+  resize: none;
+  background: transparent;
+}
+.chatbot__textarea::placeholder {
+  font-family: 'Poppins', sans-serif;
+}
+.chatbot__input-box span {
+  font-size: 1.75rem;
+  color: #202020;
+  cursor: pointer;
+  visibility: hidden;
+}
+.chatbot__textarea:valid ~ span {
+  visibility: visible;
+}
+
+@media (max-width: 490px) {
+  .chatbot {
+    right: 0;
+    bottom: 0;
+    width: 100%;
+    height: 100%;
+    border-radius: 0;
   }
-
-  .chat-input span{
-    color:#7a9e06;
-    font-size: 14px;
-    cursor: pointer;
-    background: #1b1b1b;
-    align-self: flex-end;
-    height:55px;
-    visibility: hidden;
+  .chatbot__box {
+    height: 90%;
   }
-
-  .chat-input textarea:valid ~ span {
-    visibility: visible;
-
+  .chatbot__header span {
+    display: inline;
   }
-
-  .chatbot-toggler{
-    position: fixed;
-    right:40px;
-    bottom: 35px;
-    height: 50px;
-    width: 50px;
-    color: #fff;
-    background: #7a9e06;
-    border-radius: 50%;
-    outline: none;
-    cursor: pointer;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-
-  }
-
-  .chatbot-toggler{
-  position: absolute;
-  }
-
-  .chatbot-toggler span:last-child{
-    opacity:0;
-  }
-
-  show-chatbot .chatbot-toggler span:first-child,
-  .chatbot-toggler span:last-child
-  {
-    opacity:0;
-  }
-
-  .show-chatbot .chatbot-toggler span:last-child{
-    opacity:1;
-  }
-   @media(max-wdth: 490px){
-
-    .chatbot {
-      right: 0;
-      bottom: 0;
-      width: 100%;
-      height: 100%;
-      border-radius: 10px;
-    }
-
-    .chatbot .chatbox{
-      height: 90%;
-    }
-    .chatbot header span{
-
-      display: block;
-    }
-   }
-
-  
-  
+}
 
 
 
-
-  
-
-
- 
 </style>
 
 </head>
@@ -276,40 +260,42 @@ font:16px;
     <!-- CHATBOT-->
 
         <!-- CHATBOT: Header-->
-         <button class="chatbot-toggle">
-          <span class="material-symbols-outlined">mode_comment</span>
+        <link
+        rel="stylesheet"
+        href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@48,400,0,0"
+      />
+      <link
+        rel="stylesheet"
+        href="https://fonts.googleapis.com/css2?family=Material+Symbols+Rounded:opsz,wght,FILL,GRAD@48,400,1,0"
+      />
+  <!-- Code :) -->
+     <button class="chatbot__button">
+        <span class="material-symbols-outlined">mode_comment</span>
+        <span class="material-symbols-outlined">close</span>
+      </button>
+      <div class="chatbot">
+        <div class="chatbot__header">
+          <h3 class="chatbox__title">Chatbot</h3>
           <span class="material-symbols-outlined">close</span>
-
- <div class="chatbot">
-<header>
-<h2>chatbot</h2>
-<span class="material-symbols-outlined">close</span>
-</header>
-<ul class="chatbox">
-<li class="chat incoming">
-<span class="material-symbols-outlined">smart_toy</span>
-<p>Hi. Welcome to my website.</p>
-</li>
-
-<li class="chat outgoing">
-  <p>How can I assist you?</p>
-  <span class="material-symbols-outlined"></span>
-  </li>
-</ul> 
-
-<div class="chat-input">
-  <textarea placeholder="Enter a message..." required></textarea>
-<span id="send-btn" class="material-symbols-outlined"></span>
-
-</div>
-</div>
-  
-
-
- </div>
-
-
-</div>
+        </div>
+        <ul class="chatbot__box">
+          <li class="chatbot__chat incoming">
+            <span class="material-symbols-outlined">person</span>
+            <p>Hi there. My name is Julliet Kgomotso Rakuba. How can I assist you?</p>
+          </li>
+          <li class="chatbot__chat outgoing">
+            <p>...</p>
+          </li>
+        </ul>
+        <div class="chatbot__input-box">
+          <textarea
+            class="chatbot__textarea"
+            placeholder="Enter a message..."
+            required
+          ></textarea>
+          <span id="send-btn" class="material-symbols-outlined">send</span>
+        </div>
+      </div>
   </section>
 </head>
 
