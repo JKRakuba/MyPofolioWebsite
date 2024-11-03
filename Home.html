@@ -12,7 +12,8 @@
 body,td,th {
 	font-family: "sans-serif";
 }
-body {
+html, body {
+  height: 1080px; 
   margin: 0;
   padding: 0;
 	background-color: #fff;
@@ -137,7 +138,7 @@ body {
 }
 .chatbot__chat p.error {
   color: #1b1b1b;
-  background: #f8d7da;
+  background: #7a9e06;
 }
 .incoming p {
   color: #202020;
@@ -219,7 +220,7 @@ body {
 </style>
 
 </head>
-<body class="show-chatbot">
+<body>
 
 <!-- NAVIGATION BAR-->
 <header class="header">
@@ -277,8 +278,6 @@ body {
         </div>
         <ul class="chatbot__box">
           <li class="chatbot__chat incoming">
-            <span class="material-symbols-outlined">person</span>
-            <p>Hi there. My name is Julliet Kgomotso Rakuba. How can I assist you?</p>
           </li>
           <li class="chatbot__chat outgoing">
             <p>...</p>
@@ -287,7 +286,7 @@ body {
         <div class="chatbot__input-box">
           <textarea
             class="chatbot__textarea"
-            placeholder="Enter a message..."
+            placeholder="Type a message..."
             required
           ></textarea>
           <span id="send-btn" class="material-symbols-outlined">send</span>

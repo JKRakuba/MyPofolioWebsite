@@ -5,8 +5,18 @@
   box-sizing: border-box;
 }
 
-html, body{
-	font-family: 'sans-serif';
+html, body {
+    height: 1080px; 
+    margin: 0;
+    padding: 0;
+    background-color: #fff;
+    background-image: url('girlcode-01.png');
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    text-align: left;
+    color: #fff;
+    font-family: sans-serif;
   }
 
   .p{
@@ -15,113 +25,110 @@ html, body{
     font-size: 16px;
   }
 * 
-/*NAVIGATION*/
+/* NAVIGATION */
 * {
-    padding: 0;
-    margin: 0;
-    box-sizing: border-box;
-    font-family: sans-serif;
-    text-decoration: none;
-    list-style: none;
-  }
-  
-  .header {
-    position: sticky;
-    top: 0;
-    width: 100%;
-    background-color: #1b1b1b;
-    z-index: 1;
-  }
-  
-  nav {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    padding: 20px 30px;
-  }
-  
-  .logo a {
-    font-size: 30px;
-    font-weight: bold;
-    color: #fff;
-  }
-  
-  .logo a span {
-    color: #ebdb04;
-  }
-  
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+  font-family: sans-serif;
+}
+
+.header {
+  position: sticky;
+  top: 0;
+  width: 100%;
+  background-color: #1b1b1b;
+  z-index: 1;
+}
+
+nav {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 10px 20px;
+}
+
+.logo a {
+  font-size: 30px;
+  font-weight: bold;
+  color: #fff;
+}
+
+.logo a span {
+  color: #ebdb04;
+}
+
+.menu {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.menu a {
+  display: block;
+  padding: 7px 15px;
+  font-size: 16px;
+  font-weight: 500;
+  color: #585858;
+  transition: 0.2s all ease-in-out;
+}
+
+.menu a:hover {
+  color: #1b1b1b;
+  background-color: rgba(255, 255, 255, 0.2); /* Subtle hover effect */
+}
+
+.menu-icon {
+  display: none;
+}
+
+#menu-toggle {
+  display: none;
+}
+
+@media only screen and (max-width: 768px) {
   .menu {
-    display: flex;
-    justify-content: center;
-    align-items: center;
+    flex-direction: column;
+    background-color: #ebdb04;
+    align-items: flex-start; /* Align items to the start */
+    position: absolute;
+    top: 60px; /* Adjust top position */
+    left: 0;
+    width: 100%;
+    z-index: 1;
+    display: none; /* Initially hidden */
   }
-  
+
   .menu a {
-    display: block;
-    padding: 7px 15px;
-    font-size: 16px;
-    font-weight: 500;
-    transition: 0.2s all ease-in-out;
-    color: #585858;
-    align-items: center;
+    margin-left: 12px;
+    padding: 10px 15px; /* Add padding for better touch targets */
+    color: #1b1b1b; /* Dark color for visibility */
   }
-  
-  .menu:hover a {
-    opacity: 0.4;
+
+  .menu li {
+    margin-bottom: 10px;
   }
-  
-  .menu a:hover {
-    opacity: 1;
-    color: #1b1b1b;
-  }
-  
+
   .menu-icon {
-    display: none;
+    display: block;
+    color: #fff;
+    font-size: 28px;
+    cursor: pointer;
   }
-  
-  #menu-toggle {
-    display: none;
+
+  /* Show menu when checkbox is checked */
+  #menu-toggle:checked + .menu-icon + .menu {
+    display: flex; /* Display the menu */
+    transform: scale(1); /* Scale effect not needed */
   }
-  
-  #menu-toggle:checked ~ .menu {
-    transform: scale(1, 1);
-  }
-  
-  @media only screen and (max-width: 1920px) {
-    .menu {
-      flex-direction: column;
-      background-color: #ebdb04;
-      align-items: start;
-      position: absolute;
-      top: 70px;
-      left: 0;
-      width: 100%;
-      z-index: 1;
-      transform: scale(1, 0);
-      transform-origin: top;
-      transition: transform 0.3s ease-in-out;
-    }
-  
-    .menu a {
-      margin-left: 12px;
-    }
-  
-    .menu li {
-      margin-bottom: 10px;
-    }
-  
-    .menu-icon {
-      display: block;
-      color: #fff;
-      font-size: 28px;
-      cursor: pointer;
-    }
+}
+
 
 /*HOME*/
 
 /* Jumbotron styling */
 .jumbotron {
-  background-color: #fff; 
+  background-color: none; 
   color: white;              
   padding: 50px 20px;        
   text-align: center;        
@@ -621,9 +628,7 @@ ul{
     width: 100%;
 }
 }
-  }
-
-
+  
   /* CHATBOT */
 
   .chat-bar-collapsible {
