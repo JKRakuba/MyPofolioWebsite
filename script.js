@@ -25,11 +25,11 @@ const generateResponse = (userMessage) => {
     if (userMessage.toLowerCase().includes('hi') || userMessage.toLowerCase().includes('hello')) {
         botMessage = "Hello there! I'm Julliet Kgomotso Rakuba, a passionate software developer and graphic designer.";
     } else if (userMessage.toLowerCase().includes('portfolio')) {
-        botMessage = "You can check my portfolio at [your portfolio link]. It showcases my graphic design work and software projects.";
+        botMessage = "You can check my portfolio at <a href='Potfolio.html' target='_blank'>this link</a>. It showcases my graphic design work and software projects.";
     } else if (userMessage.toLowerCase().includes('projects')) {
         botMessage = "I have worked on several projects including web applications and graphic design for various clients. Feel free to ask about specific projects!";
     } else if (userMessage.toLowerCase().includes('skills')) {
-        botMessage = "I specialize in UI/UX design, web development with HTML, CSS, JavaScript, and graphic design tools like Adobe Illustrator.";
+        botMessage = "I specialize in UI/UX design, web development with HTML, CSS, JavaScript, Java, Azure DevOps and graphic design tools like Adobe Illustrator, Dreamweaver, Photoshop and many more ";
     } else if (userMessage.toLowerCase().includes('hobbies') || userMessage.toLowerCase().includes('interests')) {
         botMessage = "I enjoy photography, coding, and exploring new places. Staying creative is important to me!";
     }
