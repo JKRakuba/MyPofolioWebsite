@@ -87,7 +87,8 @@ body {
   position: fixed;
   bottom: 100px;
   right: 40px;
-  width: 300px;
+  width: 400px;
+  height: fixed;
   background-color: #f3f7f8;
   border-radius: 15px;
   box-shadow: 0 0 128px 0 rgba(0, 0, 0, 0.1) 0 32px 64px -48px rgba(0, 0, 0, 0.5);
@@ -106,7 +107,7 @@ body {
   position: relative;
   background-color: #7a9e06;
   text-align: center;
-  padding: 16px 0;
+  padding: 10px 0;
 }
 .chatbot__header span {
   display: none;
@@ -145,7 +146,7 @@ body {
 .incoming p {
   color: #202020;
   background: #bdc3c7;
-  border-radius: 10px 10px 10px 0;
+  border-radius: 5px 5px 5px 0;
 }
 .incoming span {
   width: 32px;
@@ -172,14 +173,14 @@ body {
   display: flex;
   gap: 5px;
   align-items: center;
-  border-top: 1px solid #227ebb;
+  border-top: 1px solid #7a9e06;
   background: #f3f7f8;
   padding: 5px 20px;
 }
 .chatbot__textarea {
   width: 100%;
   min-height: 55px;
-  max-height: 180px;
+  max-height: 150px;
   font-size: 0.95rem;
   padding: 16px 15px 16px 0;
   color: #202020;
@@ -268,14 +269,13 @@ body {
       </button>
       <div class="chatbot">
         <div class="chatbot__header">
-          <h3 class="chatbox__title">Chatbot</h3>
+          <h3 class="chatbox__title">Let's Chat</h3>
           <span class="material-symbols-outlined">close</span>
         </div>
         <ul class="chatbot__box">
           <li class="chatbot__chat incoming">
           </li>
           <li class="chatbot__chat outgoing">
-            <p>...</p>
           </li>
         </ul>
         <div class="chatbot__input-box">
