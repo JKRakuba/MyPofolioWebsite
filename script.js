@@ -24,7 +24,11 @@ const generateResponse = (userMessage) => {
     // Customized responses based on your profile
     if (userMessage.toLowerCase().includes('hi') || userMessage.toLowerCase().includes('hello')) {
         botMessage = "Hello there! I'm Julliet Kgomotso Rakuba, a passionate software developer and graphic designer.";
-    } else if (userMessage.toLowerCase().includes('portfolio')) {
+    } else if (userMessage.toLowerCase().includes('profile') || userMessage.toLowerCase().includes('about')) {
+        botMessage = "I am a passionate software developer and graphic designer based in Pretoria, South Africa. I enjoy combining creativity with technical skills to create visually appealing and functional projects.";
+      } else if (userMessage.toLowerCase().includes('qualifications') || userMessage.toLowerCase().includes('certificates')) {
+        botMessage = "Diploma in Computer-based Graphic Development & Diploma in Information Technology in Software Development";
+      } else if (userMessage.toLowerCase().includes('portfolio')) {
         botMessage = "You can check my portfolio at <a href='Potfolio.html' target='_blank'>this link</a>. It showcases my graphic design work and software projects.";
     } else if (userMessage.toLowerCase().includes('projects')) {
         botMessage = "I have worked on several projects including web applications and graphic design for various clients. Feel free to ask about specific projects!";
