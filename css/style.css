@@ -60,7 +60,7 @@ nav {
 }
 
 .menu a:hover {
-    color: #1b1b1b;
+    color: #ebdb04;
     
 }
 
@@ -95,7 +95,7 @@ nav {
 
     .menu-icon {
         display: block;
-        color: #fff;
+        color: #ebdb04;
         font-size: 28px;
         cursor: pointer;
     }
