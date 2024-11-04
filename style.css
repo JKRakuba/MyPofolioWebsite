@@ -69,12 +69,12 @@ nav {
   padding: 7px 15px;
   font-size: 16px;
   font-weight: 500;
-  color: #585858;
+  color: #fff;
   transition: 0.2s all ease-in-out;
 }
 
 .menu a:hover {
-  color: #1b1b1b;
+  color: #fff;
   background-color: rgba(255, 255, 255, 0.2); /* Subtle hover effect */
 }
 
@@ -90,13 +90,14 @@ nav {
   .menu {
     flex-direction: column;
     background-color: #ebdb04;
-    align-items: flex-start; /* Align items to the start */
+    align-items: start; /* Align items to the start */
     position: absolute;
     top: 60px; /* Adjust top position */
     left: 0;
     width: 100%;
     z-index: 1;
     display: none; /* Initially hidden */
+    overflow: hidden;
   }
 
   .menu a {
@@ -121,6 +122,19 @@ nav {
     display: flex; /* Display the menu */
     transform: scale(1); /* Scale effect not needed */
   }
+
+  @media only screen and (min-width: 769px){
+
+    .menu {
+      display: flex;
+      max-height: none;    }
+  }
+   #menu-toggle {
+    display: none;
+   }
+.menu-icon{
+  display: none;
+}
 }
 
 
