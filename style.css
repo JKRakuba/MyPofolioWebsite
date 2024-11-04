@@ -21,7 +21,7 @@ html, body {
 
   .p{
 
-    color: #262626;
+    color: #1b1b1b;
     font-size: 16px;
   }
 * 
@@ -104,8 +104,17 @@ nav {
 
   .menu a {
     margin-left: 12px;
-    padding: 10px 15px; /* Add padding for better touch targets */
-    color: #1b1b1b; /* Dark color for visibility */
+    display: block;
+    padding: 7px 15px;
+    font-size: 16px;
+    font-weight: 500;
+    transition: 0.2s all ease-in-out;
+    color: #1b1b1b;
+    align-items: center;
+  }
+  
+  .menu:hover a {
+    opacity: 0.4;
   }
 
   .menu li {
@@ -245,6 +254,55 @@ nav {
 
 .contact-button:hover {
   background-color: #1b1b1b; 
+}
+
+/*ABOUT ME CONTAINER*/
+
+.about-me-container {
+  display: flex;
+  justify-content: center;
+  padding: 20px;
+}
+
+.card {
+  display: flex;
+  flex-wrap: wrap; /* Allows wrapping of elements */
+  align-items: center;
+  max-width: 800px;
+  padding: 20px;
+  background: white;
+  border-radius: 10px;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+  gap: 20px; /* Space between the image and the article */
+}
+
+.profile-info {
+  flex: 1;
+  min-width: 250px; /* Minimum width for text */
+}
+
+.profile-image {
+  flex: 0 0 150px; /* Fixed width for the image */
+  max-width: 100%; /* Responsive image */
+}
+
+.profile-image img {
+  width: 100%;
+  height: auto;
+  border-radius: 50%; /* Circular image */
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+}
+
+/* Media query for responsiveness */
+@media (max-width: 600px) {
+  .card {
+      flex-direction: column; /* Stack the elements on small screens */
+      align-items: center; /* Center items */
+  }
+
+  .profile-image {
+      margin-bottom: 20px; /* Space between image and text */
+  }
 }
 
 /*SKILLS*/
