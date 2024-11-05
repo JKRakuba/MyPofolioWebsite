@@ -622,6 +622,7 @@ margin: 20px; /* Space around the section */
 
   display: inline-block;
   background-color: #eb66ce; /* Button color */
+  size: 100px;
   color: white;
   padding: 10px 15px;
   border-radius: 5px;
