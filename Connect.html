@@ -6,7 +6,10 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>Connect</title>
 <link href="css/style.css" rel="stylesheet" type="text/css">
-<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@48,400,0,0"/>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Rounded:opsz,wght,FILL,GRAD@48,400,1,0"/>
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css"/>
+<script src="script.js" defer></script>
 <style type="text/css">
 body,td,th {
 	font-family: "Gill Sans", "Gill Sans MT", "Myriad Pro", "DejaVu Sans Condensed", Helvetica, Arial, sans-serif;
@@ -22,6 +25,32 @@ body {
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
   border-radius: 10px;
 }
+
+h1 {
+            color:#1b1b1b;
+            text-align: center;
+            padding-top: 10px;
+            padding-bottom: 10px;
+            font-size: 40px;
+            margin:10px;
+        }
+
+h2 {
+            color: #1b1b1b;
+            text-align: center;
+            padding-top: 10px;
+            padding-bottom: 10px;
+            font-size: 25px;
+        }
+
+p {
+            color: #1b1b1b;
+            text-align: center;
+            font-size: 16px;
+            padding-bottom: 15px;
+            margin: 10px;
+        }
+
 
 
 </style>
@@ -45,6 +74,35 @@ body {
       </ul>
   </nav>
 </header>
+
+ <!-- CHATBOT-->
+
+ <button class="chatbot__button">
+  <span class="material-symbols-outlined">mode_comment</span>
+  <span class="material-symbols-outlined">close</span>
+</button>
+<div class="chatbot">
+  <div class="chatbot__header">
+    <h3 class="chatbox__title">Let's Chat</h3>
+    <span class="material-symbols-outlined">close</span>
+  </div>
+  <ul class="chatbot__box">
+    <li class="chatbot__chat incoming">
+    </li>
+    <li class="chatbot__chat outgoing">
+    </li>
+  </ul>
+  <div class="chatbot__input-box">
+    <textarea
+      class="chatbot__textarea"
+      placeholder="Type a message..."
+      required
+    ></textarea>
+    <span id="send-btn" class="material-symbols-outlined">send</span>
+  </div>
+</div>
+</section>
+</head>
   
 <!-- BODY-->
 	 

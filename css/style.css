@@ -18,6 +18,32 @@ html, body{
     list-style: none;
 }
 
+
+h1 {
+  color:#1b1b1b;
+  text-align: center;
+  padding-top: 10px;
+  padding-bottom: 10px;
+  font-size: 40px;
+  margin:10px;
+}
+
+h2 {
+  color: #1b1b1b;
+  text-align: center;
+  padding-top: 10px;
+  padding-bottom: 10px;
+  font-size: 25px;
+}
+
+p {
+  color: #1b1b1b;
+  text-align: center;
+  font-size: 16px;
+  padding-bottom: 15px;
+  margin: 10px;
+}
+
 .header {
     position: sticky;
     top: 0;
@@ -297,6 +323,7 @@ body {
   }
 }
 
+
 /*HOME*/
 
 * {
@@ -330,14 +357,15 @@ img{
   height: 700px;
 }
 
+.jumbotron{
+  height: 1000px;
+  }
+
 @media only screen and (max-width: 1280px) {
   img {
   width: 100%;
   }
   }
-
-
-
 
 /*PROFILE*/
 
@@ -443,7 +471,7 @@ color: #fff;
 font-size: 14px;
 }
 
-/* SKILLS */
+/* SKILLS: VISUAL */
 
 .skills-section {
 display: flex; /* Use Flexbox to arrange columns */
@@ -482,7 +510,7 @@ margin: 20px; /* Space around the section */
 
 
 
-/*SKILLS*/
+/*SKILLS: Coding*/
 
 .skills-container {
   padding: 20px;
@@ -541,13 +569,6 @@ margin: 20px; /* Space around the section */
 
 }
 
-.h1{
-
-  font-size: large;
-  text-align: center;
-  padding: Auto;
-  color: #7a9e06;
-}
 .portfolio-container {
   display: grid;
   grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
@@ -594,10 +615,12 @@ margin: 20px; /* Space around the section */
 
 .card {
   max-width: 300px; /* Limit card width */
+  margin-bottom: 50px;
 }
 
 .container {
   max-width: 400px; /* Limit container width */
+  margin-bottom: 50px;
 }
 
 /*CONNECT*/
