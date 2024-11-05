@@ -617,6 +617,23 @@ margin: 20px; /* Space around the section */
   background-color: #1b1b1b; /* Darker shade on hover */
 }
 
+
+.graphic-project-button{
+
+  display: inline-block;
+  background-color: #eb66ce; /* Button color */
+  color: white;
+  padding: 10px 15px;
+  border-radius: 5px;
+  text-decoration: none;
+  margin: 15px 0 20px;
+  transition: background-color 0.3s;
+
+}
+
+.graphic-project-button:hover {
+  background-color: #1b1b1b; /* Darker shade on hover */
+}
 .card {
   max-width: 300px; /* Limit card width */
   margin-bottom: 50px;
