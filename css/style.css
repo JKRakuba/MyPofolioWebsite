@@ -363,9 +363,9 @@ img{
 
 .card img {
   width: auto; /* Adjusted size for better fit */
-  height: 400px; /* Adjusted size for better fit */
-  border-radius: 60px; /* Changed to 50% for circular image */
-  border: 5px solid #7a9e06; /* Changed to solid for visibility */
+  height: 300px; /* Adjusted size for better fit */
+  border-radius: 40px; /* Changed to 50% for circular image */
+  border: 5px solid #eb66ce; /* Changed to solid for visibility */
   object-fit: cover;
   margin-bottom: 20px;
 }
