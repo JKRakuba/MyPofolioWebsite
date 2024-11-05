@@ -628,6 +628,7 @@ margin: 20px; /* Space around the section */
   text-decoration: none;
   margin: 15px 0 20px;
   transition: background-color 0.3s;
+  align-items: center;
 
 }
 
